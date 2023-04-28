@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/welschmoor/simplebank/util"
+	"github.com/welschmoor/mastaclass/util"
 )
 
 func createRandomEntry(t *testing.T) Entry {
