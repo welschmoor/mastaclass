@@ -19,7 +19,8 @@ jobs:
       # Label used to access the service container
       postgres:
         # docker run --name postgres15 -p 5432:5432 -e  -e  -d postgres:15-alpine
- 
+        ports:
+          - 5432:5432
         image: postgres:15
         # Provide the password for postgres
         env:
