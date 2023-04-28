@@ -1,6 +1,9 @@
 dbname := "listings"
 dsn := "postgresql://root:secret@localhost:5432/${dbname}?sslmode=disable"
 
+run:
+	go run main.go
+
 postgres:
 	docker run --name postgres15 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:15-alpine
 
@@ -32,4 +35,4 @@ test:
 itdb:
 	docker exec -it postgres15 psql -U root
 
-.PHONY: postgres credb dropdb cremig mup mdown sqlc test itdb
+.PHONY: run postgres stoprun credb dropdb cremig mup mdown sqlc test itdb
